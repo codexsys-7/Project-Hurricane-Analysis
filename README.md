@@ -1,0 +1,2 @@
+# Project-Hurricane-Analysis
+The Project is all about organizing, manipulating and viewing the data(HURRICANE_DATA) ,This is a project where we write several functions that organize and manipulate data about Category 5 Hurricanes, the strongest hurricanes as rated by their wind speed. Each one of these functions will use a number of parameters, conditionals, lists, dictionaries, string manipulation, and return statements.
