@@ -153,23 +153,22 @@ def hurricane_rating(hurricane_data):
     if hurricane_data[i]["Death_count"] > mortality_scale[1] and hurricane_data[i]["Death_count"] < mortality_scale[2]:
       hurricanes_by_mortality[1].append(hurricane_data[i])
   
-    elif hurricane_data[i]["Death_count"] > 100 and hurricane_data[i]["Death_count"] < 500:
+    elif hurricane_data[i]["Death_count"] > mortality_scale[2] and hurricane_data[i]["Death_count"] < mortality_scale[3]:
       hurricanes_by_mortality[2].append(hurricane_data[i])
   
-    elif hurricane_data[i]["Death_count"] > 500 and hurricane_data[i]["Death_count"] < 1000:
+    elif hurricane_data[i]["Death_count"] > mortality_scale[3] and hurricane_data[i]["Death_count"] < mortality_scale[4]:
       hurricanes_by_mortality[3].append(hurricane_data[i])
   
-    elif hurricane_data[i]["Death_count"] > 1000 and hurricane_data[i]["Death_count"] < 10000:
+    elif hurricane_data[i]["Death_count"] > mortality_scale[4] and hurricane_data[i]["Death_count"] < mortality_scale[5]:
       hurricanes_by_mortality[4].append(hurricane_data[i])
   
-    elif hurricane_data[i]["Death_count"] > 10000:
+    elif hurricane_data[i]["Death_count"] > mortality_scale[5]:
       hurricanes_by_mortality[5].append(hurricane_data[i])
   return hurricanes_by_mortality
 hurricane_rating(hurricane_data)
 for i,j in hurricanes_by_mortality.items():
   print("________________________________________________________________________________________________________________________________________")
   print(i,":",j)
-
 
 print("_______________________________________________OR____________________________________________________________")
 
@@ -178,7 +177,7 @@ print("FUNCTION TO GIVE RATINGS BASED ON NUMBER OF DEATHS. ")
 hurricanes_by_mortality = {1:[],2:[],3:[],4:[],5:[]}
 for i,j in hurricane_data.items():
   mortality_scale = {1:0, 2:100, 3:500, 4:1000, 5:10000}
-  if hurricane_data[i]["Death_count"] > mortality_scale[1] and hurricane_data[i]["Death_count"] < mortality_scale[2]:
+  if hurricane_data[i]["Death_count"] > 0 and hurricane_data[i]["Death_count"] < 100:
     hurricanes_by_mortality[1].append(hurricane_data[i]["Death_count"])
   
   elif hurricane_data[i]["Death_count"] > 100 and hurricane_data[i]["Death_count"] < 500:
